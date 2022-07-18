@@ -249,7 +249,7 @@ class ReadMoreTextState extends State<ReadMoreText> {
                 'TrimMode type: ${widget.trimMode} is not supported');
         }
 
-        return Text.rich(
+        return SelectableText.rich(
           TextSpan(
             children: [
               if (preTextSpan != null) preTextSpan,
@@ -259,8 +259,8 @@ class ReadMoreTextState extends State<ReadMoreText> {
           ),
           textAlign: textAlign,
           textDirection: textDirection,
-          softWrap: true,
-          overflow: TextOverflow.clip,
+          /*     softWrap: true,
+          overflow: TextOverflow.clip, */
           textScaleFactor: textScaleFactor,
         );
       },
